@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Navigation -->
     <nav class="top-nav">
         <div class="nav-left">
             <a href="#intro" class="nav-logo">Neeta Misericordia</a>
@@ -16,7 +15,7 @@
             <a href="#projects">Projects</a>
         </div>
         <div class="nav-right">
-            <a href="https://www.linkedin.com/in/neeta-misericordia-208b32368/" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/neeta-misericordia" target="_blank" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
@@ -28,7 +27,7 @@
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a>
-            <a href="https://medium.com/@neetamisericordia1" target="_blank" aria-label="Medium">
+            <a href="https://medium.com/@neetagrg" target="_blank" aria-label="Medium">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
                 </svg>
@@ -42,9 +41,8 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
-        <!-- Intro Section -->
+        <!-- Intro Section with Mercury Style & Moving Blocks -->
         <section id="intro">
             <div class="intro-blocks">
                 <div class="block"></div>
@@ -53,6 +51,15 @@
                 <div class="block"></div>
                 <div class="block"></div>
             </div>
+            
+            <!-- Animated Profile Picture (Left) -->
+            <div class="profile-container">
+                <div class="profile-picture">
+                    <img src="profile.jpg" alt="Neeta Misericordia">
+                </div>
+            </div>
+            
+            <!-- Intro Content (Right) -->
             <div class="intro-content">
                 <h1 class="intro-name">Hi, Neeta here</h1>
                 <p class="intro-tagline">I'm a Software Engineer and master's student based in New York City.</p>
@@ -71,48 +78,157 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>/ experience</h2>
-            <!-- Job entries -->
-            <!-- Example Job -->
-            <div class="job">
-                <div class="job-header">
-                    <h3>Master's Student @ St. John's University</h3>
-                    <span class="date">AUG 2024 - MAY 2026</span>
-                </div>
-                <ul class="job-details">
-                    <li>Building autonomous AI security systems with Kubernetes self-healing capabilities, enabling zero-downtime container recovery during simulated failures</li>
-                    <li>Architected end-to-end CI/CD pipelines using GitHub Actions for automated deployment and testing workflows</li>
-                    <li>Researching machine learning engineering, advanced algorithms, and designing interactive devices</li>
-                </ul>
-            </div>
-            <!-- Add other jobs similarly -->
-        </section>
-
-        <!-- Projects Section -->
         <section id="projects">
-            <h2>/ pet projects</h2>
+            <h2>pet projects</h2>
+            
             <div class="project-nav">
                 <button class="nav-btn" id="prev-btn">Previous</button>
                 <span class="project-counter"><span id="current-project">1</span>. </span>
                 <button class="nav-btn" id="next-btn">Next</button>
             </div>
+
             <div class="project-container">
-                <!-- Example Project -->
                 <div class="project active">
                     <h3>Autonomous AI Security & Self-Healing Infrastructure</h3>
-                    <p>A containerized microservice using Python and Docker to simulate real-time network security monitoring with self-healing capabilities via Kubernetes Liveness Probes.</p>
-                    <span class="tech-tags">Python (FastAPI/Flask), Docker, Kubernetes, GitHub Actions, Linux</span>
+                    <p class="project-meta">ST. JOHN'S UNIVERSITY | JAN 2026 – PRESENT</p>
+                    <ul class="project-details">
+                        <li>Architected a containerized microservice using Python and Docker to simulate real-time network security monitoring</li>
+                        <li>Engineered self-healing capabilities by implementing Kubernetes Liveness Probes, reducing system downtime by enabling autonomous container recovery during simulated failures</li>
+                        <li>Developed an End-to-End CI/CD Pipeline (In Progress) using GitHub Actions to automate code testing and container image deployment</li>
+                        <li>Orchestrated local cloud infrastructure using Minikube to manage microservice scaling and resource allocation</li>
+                    </ul>
+                    <span class="tech-tags">Python (FastAPI/Flask), Docker, Kubernetes (Minikube), GitHub Actions, Linux</span>
                 </div>
-                <!-- Add other projects similarly -->
+
+                <div class="project">
+                    <h3>Mobile Shopping Application – iOS Development</h3>
+                    <p class="project-meta">NEW YORK, NY | SEPT 2024 - NOV 2024</p>
+                    <ul class="project-details">
+                        <li>Designed and developed a mobile shopping application with user authentication and product workflows</li>
+                        <li>Implemented clean UI components and app navigation using Swift. Engineered application logic to support product discovery, cart management, and checkout processes</li>
+                        <li>Structured app workflows to support future data tracking and user behavior analysis for shopping patterns and optimization</li>
+                        <li>Integrated backend data services and implemented state management to ensure a responsive and seamless user experience</li>
+                    </ul>
+                    <span class="tech-tags">Swift, Mobile Development, UI Design</span>
+                </div>
+
+                <div class="project">
+                    <h3>Document Question Answering System</h3>
+                    <p class="project-meta">NEW YORK, NY | NOV 2025 – JAN 2026</p>
+                    <p class="project-link">GitHub: <a href="https://github.com/Neetagrg/document-qa-system" target="_blank">github.com/Neetagrg/document-qa-system</a></p>
+                    <ul class="project-details">
+                        <li>Built an end-to-end document question-answering system to extract relevant answers from unstructured text</li>
+                        <li>Implemented text preprocessing, embedding-based retrieval, and response generation to improve answer accuracy</li>
+                        <li>Applied NLP and ML techniques to handle large datasets and enhance retrieval performance</li>
+                    </ul>
+                    <span class="tech-tags">Python, NLP, Machine Learning, Information Retrieval</span>
+                </div>
+
+                <div class="project">
+                    <h3>FinAI – AI-Enhanced Financial Platform</h3>
+                    <p class="project-meta">NEW YORK, NY | MAY 2025 - SEP 2025 | Team of 8</p>
+                    <p class="project-link">GitHub: <a href="https://github.com/gcrocetti/FinAI" target="_blank">github.com/gcrocetti/FinAI</a></p>
+                    <ul class="project-details">
+                        <li>Assisted in building an AI-powered platform to analyze financial data and provide actionable insights</li>
+                        <li>Handled data preprocessing, feature engineering, and visualization to support model accuracy</li>
+                        <li>Gained hands-on experience in machine learning workflow and collaborative software development</li>
+                        <li>Helped design user interface components for displaying predictions and insights</li>
+                    </ul>
+                    <span class="tech-tags">Python, Machine Learning, Data Analysis, Pandas, Scikit-Learn</span>
+                </div>
+
+                <div class="project">
+                    <h3>RAG Project – Retrieval-Augmented Generation Pipeline</h3>
+                    <p class="project-link">GitHub: <a href="https://github.com/Neetagrg/Neeta-s-RAG-project" target="_blank">github.com/Neetagrg/Neeta-s-RAG-project</a></p>
+                    <ul class="project-details">
+                        <li>Implemented a Retrieval-Augmented Generation pipeline using TypeScript and vector search to improve AI-driven responses</li>
+                    </ul>
+                    <span class="tech-tags">TypeScript, Vector Search, RAG, AI Systems</span>
+                </div>
+
+                <div class="project">
+                    <h3>Web Data Mining / Mini Projects</h3>
+                    <p class="project-link">GitHub: <a href="https://github.com/Neetagrg/Mini-Project-3_Spring-2025-WEB-DATA-MINING-CUS-635" target="_blank">github.com/Neetagrg/Mini-Project-3</a></p>
+                    <ul class="project-details">
+                        <li>Performed data extraction, preprocessing, and analysis using Python and Jupyter Notebooks to identify patterns and insights</li>
+                    </ul>
+                    <span class="tech-tags">Python, Jupyter, Data Mining, Analytics</span>
+                </div>
             </div>
         </section>
+
+        <section id="experience">
+            <h2>experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3>Game Support Analyst @ Ubisoft</h3>
+                    <span class="date">JAN 2022 - NOV 2023</span>
+                </div>
+                <p class="job-location">Newcastle, UK</p>
+                <ul class="job-details">
+                    <li><strong>Systems Diagnosis:</strong> Investigated and resolved complex technical bugs and software regressions for a global user base, directly influencing player retention metrics</li>
+                    <li><strong>Cross-Functional Collaboration:</strong> Acted as a technical liaison between QA, Product, and Engineering teams to escalate critical infrastructure failures and validate patch deployments</li>
+                    <li><strong>Data Analytics:</strong> Analyzed recurring player data patterns to identify systemic software issues, providing actionable insights that reduced engineering resolution time</li>
+                    <li><strong>Technical Documentation:</strong> Authored standardized internal workflows for escalating critical server-side issues, improving team response efficiency by 20%</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Operations & Guest Service Lead @ St. John's University</h3>
+                    <span class="date">MAY 2024 - SEPT 2024</span>
+                </div>
+                <p class="job-location">New York, NY</p>
+                <ul class="job-details">
+                    <li><strong>Workflow Optimization:</strong> Directed daily operations and resource allocation for a multi-functional team, ensuring high uptime of service delivery in a high-pressure environment</li>
+                    <li><strong>Leadership & Mentorship:</strong> Scaled team performance by implementing new training protocols, focusing on conflict resolution and rapid problem-solving</li>
+                    <li><strong>Stakeholder Management:</strong> Coordinated across university departments to manage complex logistics and event scheduling, utilizing data-driven planning to optimize the guest experience</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Get In Touch CTA -->
+        <section id="contact">
+            <div class="contact-cta">
+                <h2>Let's Build Something Together</h2>
+                <p>I'm currently looking for new opportunities in cloud engineering, ML infrastructure, and autonomous systems. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                <a href="mailto:neetamisericordia1@outlook.com" class="highlight-link">Get In Touch →</a>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills">
+            <h2>technical skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>C++, Python, Node.js, Go, Java, C#, C</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools / Libraries</h3>
+                    <p>TensorFlow, PyTorch, Docker, Kubernetes, Salesforce (CRM/Data Management), Git/GitHub</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Web / OS</h3>
+                    <p>TypeScript, JavaScript, Next.js, HTML, CSS, React.js, Vue.js · Linux — Debian and Arch based, MacOS</p>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>DB / Cloud</h3>
+                    <p>MongoDB, Spanner, PostgreSQL, Redis, Elasticsearch · AWS, GCP, Netlify, Firebase, Heroku, Kubernetes, Serverless, CI/CD</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built and designed by Neeta Misericordia.<br>All rights reserved. ©</p>
+        </footer>
     </div>
 
-    <!-- Footer (full-width) -->
-    <footer>
-        <p>Built and designed by Neeta Misericordia.<br>All rights reserved. ©</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
