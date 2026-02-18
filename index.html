@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Navigation -->
     <nav class="top-nav">
         <div class="nav-left">
             <a href="#intro" class="nav-logo">Neeta Misericordia</a>
             <a href="#intro">Home</a>
+            <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
         </div>
         <div class="nav-right">
-            <a href="https://www.linkedin.com/in/neeta-misericordia" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/neeta-misericordia-208b32368/" target="_blank" aria-label="LinkedIn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
@@ -27,7 +29,7 @@
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a>
-            <a href="https://medium.com/@neetagrg" target="_blank" aria-label="Medium">
+            <a href="https://medium.com/@neetamisericordia1" target="_blank" aria-label="Medium">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
                 </svg>
@@ -42,7 +44,7 @@
     </nav>
 
     <div class="container">
-        <!-- Intro Section with Mercury Style & Moving Blocks -->
+        <!-- Intro Section -->
         <section id="intro">
             <div class="intro-blocks">
                 <div class="block"></div>
@@ -55,8 +57,7 @@
             <!-- Animated Profile Picture (Left) -->
             <div class="profile-container">
                 <div class="profile-picture">
-                    <!-- Add your profile.jpg image to the folder, or remove this comment and add: -->
-                    <!-- <img src="profile.jpg" alt="Neeta Misericordia"> -->
+                    <!-- Add your profile.jpg image to the folder -->
                 </div>
             </div>
             
@@ -64,9 +65,8 @@
             <div class="intro-content">
                 <h1 class="intro-name">Hi, Neeta here</h1>
                 <p class="intro-tagline">Software Engineer & Master in Computer Science</p>
-                <p class="intro-description">Software and Machine Learning Engineer and M.Eng candidate specializing in resilient, ML-integrated backend architectures. Proven track record at Fidelity Investments and Ubisoft optimizing high-scale systems, including a 22% latency reduction for microservices handling $1M+ daily. Expert in C++, Python, and MLOps, focused on solving complex challenges in autonomous systems and real-time data processing.
-                </p>
-                <!-- Animated Email Button -->
+                
+                <!-- Get In Touch Button -->
                 <a href="mailto:neetamisericordia1@outlook.com" class="email-button" aria-label="Email Neeta">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -79,105 +79,13 @@
             </div>
         </section>
 
-        <section id="projects">
-            <h2>pet projects</h2>
-            
-            <div class="project-nav">
-                <button class="nav-btn" id="prev-btn">Previous</button>
-                <span class="project-counter"><span id="current-project">1</span>. </span>
-                <button class="nav-btn" id="next-btn">Next</button>
-            </div>
-
-            <div class="project-container">
-                <div class="project active">
-                    <h3>Autonomous AI Security & Self-Healing Infrastructure</h3>
-                    <p class="project-meta">ST. JOHN'S UNIVERSITY | JAN 2026</p>
-                    <ul class="project-details">
-                        <li>Engineered a high-performance self-healing microservices architecture using C++ and Python, implementing Finite State Machines (FSM) for automated anomaly detection and system recovery</li>
-                        <li>Deployed a containerized environment using Kubernetes (Minikube), reducing service downtime by 90% through automated pod rescheduling and health-check logic</li>
-                        <li>Developed an integrated MLOps pipeline with GitHub Actions to automate the training and deployment of security models, ensuring real-time performance optimization</li>
-                        <li>Optimized system throughput by implementing asynchronous control logic, allowing the infrastructure to handle concurrent failure simulations without performance degradation</li>
-                    </ul>
-                    <span class="tech-tags">C++, Python, Kubernetes, Minikube, GitHub Actions, MLOps</span>
-                </div>
-
-                <div class="project">
-                    <h3>Real-Time 2D Object Recognition</h3>
-                    <p class="project-meta">ST. JOHN'S UNIVERSITY | JAN 2025 – MAR 2025</p>
-                    <ul class="project-details">
-                        <li>Implemented segmentation using thresholding, morphological filtering, and connected components analysis in C++</li>
-                        <li>Engineered feature extraction pipeline using Hu moments, aspect ratio, and texture statistics</li>
-                        <li>Built real-time object classification model using K-Nearest Neighbors with Euclidean distance</li>
-                        <li>Designed training system to collect and store labeled feature vectors for adaptive learning</li>
-                        <li>Integrated OpenCV for optimized real-time processing in industrial automation scenarios</li>
-                    </ul>
-                    <span class="tech-tags">C++, OpenCV</span>
-                </div>
-
-                <div class="project">
-                    <h3>Mobile Shopping Application – iOS Development</h3>
-                    <p class="project-meta">SEP 2024 - NOV 2024</p>
-                    <ul class="project-details">
-                        <li>Developed a Swift-based mobile app with authentication, product workflows, and checkout functionality</li>
-                        <li>Engineered scalable application logic and state management for seamless UX</li>
-                        <li>Integrated backend services and structured workflows for future analytics tracking</li>
-                    </ul>
-                    <span class="tech-tags">Swift, Mobile Development, UI Design, State Management</span>
-                </div>
-
-                <div class="project">
-                    <h3>Document Question-Answering System (MLOps Focus)</h3>
-                    <p class="project-meta">NOV 2025 – JAN 2026</p>
-                    <ul class="project-details">
-                        <li>Built an end-to-end NLP system capable of extracting precise answers from large unstructured datasets</li>
-                        <li>Integrated embedding-based retrieval models into scalable infrastructure</li>
-                        <li>Optimized preprocessing pipelines to improve data accuracy and model performance</li>
-                    </ul>
-                    <span class="tech-tags">Python, NLP</span>
-                </div>
-
-                <div class="project">
-                    <h3>FinAI — AI-Driven Financial Analytics Platform</h3>
-                    <p class="project-meta">MAY 2025 – SEP 2025</p>
-                    <ul class="project-details">
-                        <li>Contributed to development of an ML platform delivering predictive financial insights</li>
-                        <li>Performed feature engineering, data cleaning, and visualization to improve model accuracy</li>
-                        <li>Collaborated in an Agile team to deliver modular analytics components</li>
-                    </ul>
-                    <span class="tech-tags">Python, Machine Learning</span>
-                </div>
-
-                <div class="project">
-                    <h3>Mobile Shopping Application (iOS)</h3>
-                    <p class="project-meta">SEP 2024 – NOV 2024</p>
-                    <ul class="project-details">
-                        <li>Developed a Swift-based mobile app with authentication, product workflows, and checkout functionality</li>
-                        <li>Engineered scalable application logic and state management for seamless UX</li>
-                        <li>Integrated backend services and structured workflows for future analytics tracking</li>
-                    </ul>
-                    <span class="tech-tags">Swift, iOS</span>
-                </div>
-
-                <div class="project">
-                    <h3>RAG Project – Retrieval-Augmented Generation Pipeline</h3>
-                    <p class="project-link">GitHub: <a href="https://github.com/Neetagrg/Neeta-s-RAG-project" target="_blank">github.com/Neetagrg/Neeta-s-RAG-project</a></p>
-                    <ul class="project-details">
-                        <li>Implemented a Retrieval-Augmented Generation pipeline using TypeScript and vector search to improve AI-driven responses</li>
-                    </ul>
-                    <span class="tech-tags">TypeScript, Vector Search, RAG, AI Systems</span>
-                </div>
-
-                <div class="project">
-                    <h3>Web Data Mining / Mini Projects</h3>
-                    <p class="project-link">GitHub: <a href="https://github.com/Neetagrg/Mini-Project-3_Spring-2025-WEB-DATA-MINING-CUS-635" target="_blank">github.com/Neetagrg/Mini-Project-3</a></p>
-                    <ul class="project-details">
-                        <li>Performed data extraction, preprocessing, and analysis using Python and Jupyter Notebooks to identify patterns and insights</li>
-                    </ul>
-                    <span class="tech-tags">Python, Jupyter, Data Mining, Analytics</span>
-                </div>
-            </div>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>about me</h2>
+            <p>Software and Machine Learning Engineer and M.Eng candidate specializing in resilient, ML-integrated backend architectures. Proven track record at Fidelity Investments and Ubisoft optimizing high-scale systems, including a 22% latency reduction for microservices handling $1M+ daily. Expert in C++, Python, and MLOps, focused on solving complex challenges in autonomous systems and real-time data processing.</p>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience">
             <h2>experience</h2>
             
@@ -239,12 +147,92 @@
             </div>
         </section>
 
-        <!-- Get In Touch CTA -->
-        <section id="contact">
-            <div class="contact-cta">
-                <h2>Let's Build Something Together</h2>
-                <p>I'm currently looking for new opportunities in cloud engineering, ML infrastructure, and autonomous systems. Whether you have a question or just want to say hi, feel free to reach out!</p>
-                <a href="mailto:neetamisericordia1@outlook.com" class="highlight-link">Get In Touch →</a>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>projects</h2>
+            
+            <div class="project-nav">
+                <button class="nav-btn" id="prev-btn">Previous</button>
+                <span class="project-counter"><span id="current-project">1</span>. </span>
+                <button class="nav-btn" id="next-btn">Next</button>
+            </div>
+
+            <div class="project-container">
+                <div class="project active">
+                    <h3>Autonomous AI Security & Self-Healing Infrastructure</h3>
+                    <p class="project-meta">ST. JOHN'S UNIVERSITY | JAN 2026</p>
+                    <ul class="project-details">
+                        <li>Engineered a high-performance self-healing microservices architecture using C++ and Python, implementing Finite State Machines (FSM) for automated anomaly detection and system recovery</li>
+                        <li>Deployed a containerized environment using Kubernetes (Minikube), reducing service downtime by 90% through automated pod rescheduling and health-check logic</li>
+                        <li>Developed an integrated MLOps pipeline with GitHub Actions to automate the training and deployment of security models, ensuring real-time performance optimization</li>
+                        <li>Optimized system throughput by implementing asynchronous control logic, allowing the infrastructure to handle concurrent failure simulations without performance degradation</li>
+                    </ul>
+                    <span class="tech-tags">C++, Python, Kubernetes, Minikube, GitHub Actions, MLOps</span>
+                </div>
+
+                <div class="project">
+                    <h3>Real-Time 2D Object Recognition</h3>
+                    <p class="project-meta">ST. JOHN'S UNIVERSITY | JAN 2025 – MAR 2025</p>
+                    <ul class="project-details">
+                        <li>Implemented segmentation using thresholding, morphological filtering, and connected components analysis in C++</li>
+                        <li>Engineered feature extraction pipeline using Hu moments, aspect ratio, and texture statistics</li>
+                        <li>Built real-time object classification model using K-Nearest Neighbors with Euclidean distance</li>
+                        <li>Designed training system to collect and store labeled feature vectors for adaptive learning</li>
+                        <li>Integrated OpenCV for optimized real-time processing in industrial automation scenarios</li>
+                    </ul>
+                    <span class="tech-tags">C++, OpenCV</span>
+                </div>
+
+                <div class="project">
+                    <h3>Document Question-Answering System (MLOps Focus)</h3>
+                    <p class="project-meta">NOV 2025 – JAN 2026</p>
+                    <ul class="project-details">
+                        <li>Built an end-to-end NLP system capable of extracting precise answers from large unstructured datasets</li>
+                        <li>Integrated embedding-based retrieval models into scalable infrastructure</li>
+                        <li>Optimized preprocessing pipelines to improve data accuracy and model performance</li>
+                    </ul>
+                    <span class="tech-tags">Python, NLP</span>
+                </div>
+
+                <div class="project">
+                    <h3>FinAI — AI-Driven Financial Analytics Platform</h3>
+                    <p class="project-meta">MAY 2025 – SEP 2025</p>
+                    <ul class="project-details">
+                        <li>Contributed to development of an ML platform delivering predictive financial insights</li>
+                        <li>Performed feature engineering, data cleaning, and visualization to improve model accuracy</li>
+                        <li>Collaborated in an Agile team to deliver modular analytics components</li>
+                    </ul>
+                    <span class="tech-tags">Python, Machine Learning</span>
+                </div>
+
+                <div class="project">
+                    <h3>Mobile Shopping Application (iOS)</h3>
+                    <p class="project-meta">SEP 2024 – NOV 2024</p>
+                    <ul class="project-details">
+                        <li>Developed a Swift-based mobile app with authentication, product workflows, and checkout functionality</li>
+                        <li>Engineered scalable application logic and state management for seamless UX</li>
+                        <li>Integrated backend services and structured workflows for future analytics tracking</li>
+                    </ul>
+                    <span class="tech-tags">Swift, iOS</span>
+                </div>
+
+                <div class="project">
+                    <h3>Retrieval-Augmented Generation (RAG) System</h3>
+                    <p class="project-meta">ADDITIONAL PROJECT</p>
+                    <ul class="project-details">
+                        <li>Implemented using vector search and TypeScript</li>
+                    </ul>
+                    <span class="tech-tags">TypeScript, Vector Search</span>
+                </div>
+
+                <div class="project">
+                    <h3>Web Data Mining & Pattern Analysis</h3>
+                    <p class="project-meta">ADDITIONAL PROJECT</p>
+                    <ul class="project-details">
+                        <li>Performed using Python and Jupyter</li>
+                    </ul>
+                    <span class="tech-tags">Python, Jupyter</span>
+                </div>
             </div>
         </section>
 
@@ -292,6 +280,34 @@
                     <h3>Concepts & Methodologies</h3>
                     <p>State Machines, Behavior Trees, Task Planning, Control Logic, System Design, REST APIs, Serverless Architecture</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>education</h2>
+            
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Master of Engineering in Computer Science (Concentration: Machine Learning)</h3>
+                    <span class="date">MAY 2026</span>
+                </div>
+                <p class="edu-school">St. John's University, New York</p>
+                <p class="edu-details"><strong>Relevant Coursework:</strong> Machine Learning Engineering, Advanced Data Structures & Algorithms, Data Mining, Interactive Systems</p>
+                <p class="edu-details"><strong>Research & Development:</strong> Architecting a self-healing microservices framework utilizing autonomous state machine logic for real-time failure recovery</p>
+            </div>
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Bachelor of Science</h3>
+                    <span class="date">COMPLETED</span>
+                </div>
+                <p class="edu-school">Himalayan Garhwal University</p>
+            </div>
+
+            <div class="certification-item">
+                <h3>Certifications</h3>
+                <p>AWS Academy Graduate – Cloud Foundations (2025)</p>
             </div>
         </section>
 
