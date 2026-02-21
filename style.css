@@ -1,18 +1,29 @@
-/* === Color Variables - Sand & Shiny Turquoise Theme === */
+/* CSS Variables - Rhode Theme (Corrected Colors) */
 :root {
-    --background: #F5E8C7; /* soft sand color */
+    --background: #F5E6D7;        /* sand-like background */
     --white: #FFFFFF;
-    --soft-nude: #EADFD9; 
-    --charcoal: #006666; /* deep turquoise for main text */
-    --near-black: #004D4D; /* darker turquoise for headings */
+    --soft-nude: #EADFD9;
+    --charcoal: #2A2A2A;
+    --near-black: #1F1F1F;
     --warm-gray: #6B6B6B;
-    --medium-gray: #008B8B; /* medium turquoise for secondary text */
+    --medium-gray: #8A8A8A;
     --light-gray: #A3A3A3;
-    --accent: #00CED1; /* shiny turquoise accent for links/buttons */
-    --accent-light: rgba(0, 206, 209, 0.2); /* lighter turquoise overlay */
+    --accent: #30E0C0;            /* shiny turquoise text */
+    --accent-light: rgba(48, 224, 192, 0.2); /* subtle turquoise highlight */
 }
 
-/* Body background and text */
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--soft-nude);
+    color: var(--charcoal);
+}
+
 body {
     background-color: var(--background);
     color: var(--charcoal);
@@ -20,39 +31,297 @@ body {
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
-/* Headings and intro text - shiny turquoise gradient */
-.intro-name, h2, h3, .intro-greeting {
-    background: linear-gradient(90deg, #00CED1, #20B2AA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 1px 2px rgba(0, 206, 209, 0.3); /* subtle shine */
+/* Top Navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(245, 245, 243, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(163, 163, 163, 0.1);
 }
 
-/* Links & hover effects */
-a, .nav-logo:hover, .nav-left a:not(.nav-logo):hover, .email-button {
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
     color: var(--accent);
-    border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0, 206, 209, 0.3);
 }
 
-/* Accent highlights */
-.job .job-details li::before,
-.project-details li::before,
-.tech-grid li::before,
-.highlight-link:hover,
-.project-meta,
-.date {
+.nav-left a:not(.nav-logo) {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-left a:not(.nav-logo)::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-left a:not(.nav-logo):hover {
     color: var(--accent);
 }
 
-/* Buttons background hover */
-.email-button:hover::before {
-    background: var(--accent);
+.nav-left a:not(.nav-logo):hover::before {
+    width: 100%;
 }
 
-/* Optional: softer secondary text */
-.intro-tagline, .intro-description, .project-link a, #about p, .tech-grid p, .job-location, .edu-school, .edu-details {
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-right a {
     color: var(--medium-gray);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
 }
+
+.nav-right a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.nav-right svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Intro Section - Mercury Style */
+#intro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6vw;
+    padding: 0 5vw;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Profile Picture Container (Left) */
+.profile-container {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.profile-picture {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    background: var(--white);
+}
+
+.profile-picture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent), transparent);
+    opacity: 0.1;
+    transition: opacity 0.4s ease;
+}
+
+.profile-picture:hover {
+    transform: translateY(-10px) scale(1.05) rotate(2deg);
+    box-shadow: 0 20px 50px rgba(100, 255, 218, 0.5);
+    border-color: var(--charcoal);
+}
+
+.profile-picture:hover::before {
+    opacity: 0.2;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: grayscale(30%);
+}
+
+.profile-picture:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Placeholder styling if image doesn't load */
+.profile-picture::after {
+    content: 'NM';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    z-index: -1;
+}
+
+/* Animated Background Blocks */
+.intro-blocks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.block {
+    position: absolute;
+    background: var(--soft-nude);
+    opacity: 0.3;
+    animation: float 20s infinite ease-in-out;
+}
+
+.block:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+}
+
+.block:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 70%;
+    top: 40%;
+    animation-delay: 5s;
+    animation-duration: 20s;
+}
+
+.block:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    top: 60%;
+    animation-delay: 2s;
+    animation-duration: 30s;
+}
+
+.block:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 80%;
+    top: 15%;
+    animation-delay: 8s;
+    animation-duration: 22s;
+}
+
+.block:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 20%;
+    top: 70%;
+    animation-delay: 3s;
+    animation-duration: 27s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(30px, -30px) rotate(90deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-20px, 40px) rotate(180deg);
+        opacity: 0.2;
+    }
+    75% {
+        transform: translate(40px, 20px) rotate(270deg);
+        opacity: 0.4;
+    }
+}
+
+/* Intro Content */
+.intro-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+/* Mercury/Glitch Style Text */
+.intro-greeting {
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.intro-name {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.intro-tagline {
+    font-size: 2rem;
+    color: var(--medium-gray);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.intro-description {
+    font-size: 1.1rem;
+    color: var(--medium-gray);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+/* ... rest of your CSS remains unchanged ... */
